@@ -8,7 +8,6 @@ export const svgPathVariants = {
         pathLength: 1,
         transition: {
             duration: 2,
-            delay: 3.5,
             ease: 'easeInOut',
         },
     },
@@ -17,16 +16,14 @@ export const svgPathVariants = {
 export const textVarinats = {
     hidden: {
         opacity: 0,
-        x: -50,
     },
     visible: {
         opacity: 1,
-        x: -5,
 
         transition: {
-            duration: 2,
-            delay: 5.5,
+            duration: 1,
             ease: 'easeInOut',
+            yoyo: Infinity, // Repeats infinite times
         },
     },
 };
