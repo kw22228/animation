@@ -52,6 +52,7 @@ export const MenuItems = styled(motion.ul)`
 
     width: 100%;
     padding: 0 10rem;
+    cursor: pointer;
 `;
 
 export const MenuItem = styled(motion.li)`

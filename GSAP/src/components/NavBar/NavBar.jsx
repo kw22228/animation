@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import * as s from './NavBar.style';
 
 const NavBar = () => {
     const [menuclick, setMenuClick] = useState(false);
 
+    const { scroll } = useLocomotiveScroll();
+
+    const handleSCroll = id => {
+        let element = document.querySelector(id);
+        setMenuClick(prev => !prev);
+        scroll.scrollTo(element, {
+            offset: '0',
+            duration: '2000',
+            easing: [0.25, 0.0, 0.35, 1.0],
+        });
+    };
     return (
         <s.NavContinaer
             menuclick={String(menuclick)}
@@ -31,6 +43,7 @@ const NavBar = () => {
             >
                 <s.MenuBtn onClick={() => setMenuClick(prev => !prev)}>Menu</s.MenuBtn>
                 <s.MenuItem
+                    onClick={() => handleSCroll('#home')}
                     whileHover={{
                         scale: 1.1,
                         y: -5,
@@ -43,6 +56,7 @@ const NavBar = () => {
                     Home
                 </s.MenuItem>
                 <s.MenuItem
+                    onClick={() => handleSCroll('.about')}
                     whileHover={{
                         scale: 1.1,
                         y: -5,
@@ -55,6 +69,7 @@ const NavBar = () => {
                     about
                 </s.MenuItem>
                 <s.MenuItem
+                    onClick={() => handleSCroll('#shop')}
                     whileHover={{
                         scale: 1.1,
                         y: -5,
@@ -67,6 +82,7 @@ const NavBar = () => {
                     shop
                 </s.MenuItem>
                 <s.MenuItem
+                    onClick={() => handleSCroll('#newArrival')}
                     whileHover={{
                         scale: 1.1,
                         y: -5,
