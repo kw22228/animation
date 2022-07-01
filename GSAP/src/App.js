@@ -4,7 +4,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 import MainPage from './pages/MainPage';
 import { BrowserRouter } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import ScrollTriggerProxy from './animation/gsap/ScrollTriggerProxy';
 
 function App() {
     const containRef = useRef(null);
@@ -23,7 +23,8 @@ function App() {
                     }
                     containerRef={containRef}
                 >
-                    <main data-scroll-container ref={containRef}>
+                    <ScrollTriggerProxy />
+                    <main className="Main" data-scroll-container ref={containRef}>
                         <MainPage />
                     </main>
                 </LocomotiveScrollProvider>

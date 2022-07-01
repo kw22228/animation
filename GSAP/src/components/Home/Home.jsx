@@ -6,7 +6,7 @@ import * as s from './Home.style';
 
 const Home = () => {
     return (
-        <s.Section>
+        <s.Section id="home">
             <CoverVideo />
             <Logo />
             <NavBar />
