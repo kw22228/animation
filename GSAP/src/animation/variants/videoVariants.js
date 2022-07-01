@@ -6,8 +6,8 @@ export const videoTitleVarinats = {
         opacity: 1,
 
         transition: {
-            delayChildren: 0.5,
-            staggerChildren: 0.3,
+            delayChildren: 5,
+            staggerChildren: 0.5,
         },
     },
 };
