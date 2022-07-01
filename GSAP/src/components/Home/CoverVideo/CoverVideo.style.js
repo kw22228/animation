@@ -10,6 +10,13 @@ export const VideoContainer = styled.section`
         width: 100%;
         height: 100vh;
         object-fit: cover;
+
+        @media (max-width: 48em) {
+            object-position: center 10%;
+        }
+        @media (max-width: 30em) {
+            object-position: center 50%;
+        }
     }
 `;
 
@@ -45,6 +52,10 @@ export const Title = styled(motion.div)`
         font-family: 'Kaushan Script';
         font-size: ${props => props.theme.fontBig};
         text-shadow: 1px 1px 1px ${props => props.theme.body};
+
+        @media (max-width: 30em) {
+            font-size: ${props => props.theme.fontxxxl};
+        }
     }
     h2 {
         font-family: 'Sirin Stencil';
