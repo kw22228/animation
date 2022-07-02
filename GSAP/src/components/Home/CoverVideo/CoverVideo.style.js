@@ -54,7 +54,7 @@ export const Title = styled(motion.div)`
         text-shadow: 1px 1px 1px ${props => props.theme.body};
 
         @media (max-width: 30em) {
-            font-size: ${props => props.theme.fontxxxl};
+            font-size: calc(5rem + 8vw);
         }
     }
     h2 {
@@ -63,5 +63,10 @@ export const Title = styled(motion.div)`
         text-shadow: 1px 1px 1px ${props => props.theme.body};
         font-weight: 300;
         text-transform: capitalize;
+
+        @media (max-width: 30em) {
+            font-size: ${props => props.theme.fontmd};
+            margin-top: -0.5rem;
+        }
     }
 `;

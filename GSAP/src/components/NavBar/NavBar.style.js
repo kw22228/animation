@@ -12,6 +12,10 @@ export const NavContinaer = styled(motion.div)`
     align-items: center;
 
     transition: all 0.3s ease;
+
+    @media (max-width: 40em) {
+        top: ${props => (props.menuclick === 'true' ? '0' : `calc(-50vh - 4rem)`)};
+    }
 `;
 
 export const MenuBtn = styled.li`
@@ -37,6 +41,11 @@ export const MenuBtn = styled.li`
     text-transform: uppercase;
 
     cursor: pointer;
+
+    @media (max-width: 40em) {
+        width: 10rem;
+        height: 2rem;
+    }
 `;
 
 export const MenuItems = styled(motion.ul)`
@@ -52,7 +61,12 @@ export const MenuItems = styled(motion.ul)`
 
     width: 100%;
     padding: 0 10rem;
-    cursor: pointer;
+
+    @media (max-width: 40em) {
+        flex-direction: column;
+        height: 50vh;
+        padding: 2rem 0;
+    }
 `;
 
 export const MenuItem = styled(motion.li)`

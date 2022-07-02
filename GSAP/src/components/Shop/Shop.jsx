@@ -22,7 +22,9 @@ const Shop = () => {
 
         //스크롤 돌릴 element의 width
         let pinWrapWidth = scrollingElement.offsetWidth;
-        let rightWidth = window.innerWidth - leftElement.offsetWidth;
+        let leftWidth = leftElement.offsetWidth;
+        let rightWidth = window.innerWidth - leftWidth;
+
         let t1 = gsap.timeline();
 
         setTimeout(() => {

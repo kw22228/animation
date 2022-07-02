@@ -22,4 +22,8 @@ export const Item = styled(motion.div)`
         text-align: center;
         cursor: pointer;
     }
+
+    @media (max-width: 48em) {
+        width: 15rem;
+    }
 `;
