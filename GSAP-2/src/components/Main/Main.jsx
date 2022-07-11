@@ -14,7 +14,7 @@ import Mobile from '../../assets/mobile.svg';
 
 const Main = () => {
     return (
-        <s.Container>
+        <s.Container id="home">
             <s.MainSection>
                 <s.Blobs>
                     <s.PinkBlob>
