@@ -8,7 +8,7 @@ import Instagram from '../../../assets/instagram-square-brands.svg';
 
 const Contact = () => {
     return (
-        <s.ContactSection>
+        <s.ContactSection id="contact">
             <s.Title>Get in touce</s.Title>
             <s.Icons>
                 <a href="#">

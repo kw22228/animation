@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../styles/variable';
 
 export const ContactSection = styled.section`
     width: 100vw;
@@ -58,6 +59,10 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (${device.mobileSM}) {
+        width: 90%;
+    }
 
     input {
         padding: 1rem calc(0.5rem + 1vw);
@@ -122,9 +127,20 @@ export const Form = styled.form`
         }
     }
 
-    & > div {
+    & > div:last-child {
         margin: 0 auto;
     }
 `;
 
-export const Row = styled.div``;
+export const Row = styled.div`
+    @media (${device.mobileSM}) {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            &[name='name'] {
+                margin-right: 0;
+            }
+        }
+    }
+`;
