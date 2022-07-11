@@ -8,7 +8,7 @@ import human from '../../../assets/human.svg';
 
 const About = () => {
     return (
-        <s.AboutSection>
+        <s.AboutSection id="about">
             <s.Waves src={waves} alt="waves" width="400" height="400" />
             <s.Hand>
                 <img src={hand} alt="hand" width="400" height="400" />
