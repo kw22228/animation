@@ -22,8 +22,10 @@ export const Background = styled.div`
     left: 0;
     bottom: 0;
     width: 100vw;
-    height: 100%;
+    height: 85vh;
+    z-index: -1;
     background-color: ${props => props.theme.black};
+    background-repeat: no-repeat;
     background-size: auto 100vh;
 `;
 
@@ -63,7 +65,7 @@ export const Triangle = styled.span`
 
 export const Content = styled.div`
     display: flex;
-    margin: 3rem 10rem;
+    margin: 10rem 10rem;
 
     align-items: center;
     justify-content: space-between;
