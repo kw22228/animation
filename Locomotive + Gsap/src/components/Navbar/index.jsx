@@ -1,13 +1,14 @@
-import React from 'react';
-import './style.scss';
-const NavBar = () => {
-    return (
-        <div className="navbar">
-            <div>menu</div>
-            <div>Flirty Flowers</div>
-            <div>cart</div>
-        </div>
-    );
-};
+import React from "react";
+import "./style.scss";
 
-export default NavBar;
+export default function Navbar() {
+  return (
+    <div className="navbar" data-scroll-section >
+      <div>menu</div>
+
+      <div>Flirty Flowers</div>
+
+      <div>cart</div>
+    </div>
+  );
+}
